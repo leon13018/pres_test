@@ -1,0 +1,315 @@
+/* ReadBooks.css — prefix: .rb-
+ * chalk-garden: 书架书脊 / 公式方程 / 大数字英雄 / 三件事逐步揭示
+ */
+
+/* ── 通用基底 ──────────────────────────────────────────────── */
+.rb-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.rb-yellow { color: var(--accent); }
+
+/* ── Scene 0: 书架 ─────────────────────────────────────────── */
+.rb-s0 { gap: 28px; }
+
+.rb-s0-eyebrow {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: rb-fadein var(--dur-base) ease both;
+}
+
+.rb-shelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.rb-book {
+  width: 44px;
+  height: var(--bh, 160px);
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: 3px 3px 0 0;
+  animation: rb-riseup var(--dur-base) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rb-book::after {
+  content: "";
+  display: block;
+  margin: 14px 8px 0;
+  height: 2px;
+  background: var(--rule);
+  box-shadow: 0 10px 0 var(--rule);
+}
+
+.rb-book--hero {
+  background: var(--accent-soft);
+  border: 2px solid var(--accent);
+}
+
+.rb-book--hero::after {
+  background: var(--accent-soft);
+  box-shadow: 0 10px 0 var(--accent-soft);
+}
+
+.rb-s0-title {
+  font-family: var(--font-display-cn);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  animation: rb-chalkin var(--dur-slow) ease both 380ms;
+}
+
+.rb-s0-tags {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: rb-fadein var(--dur-base) ease both 680ms;
+}
+
+.rb-tag {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-mute);
+}
+
+.rb-tag-sep {
+  font-size: 22px;
+  color: var(--text-faint);
+}
+
+/* ── Scene 1: 隐形导师公式 ─────────────────────────────────── */
+.rb-s1 { gap: 60px; }
+
+.rb-s1-lead {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rb-fadein var(--dur-base) ease both;
+}
+
+.rb-equation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.rb-eq-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 44px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+}
+
+.rb-eq-a      { animation: rb-slide-l var(--dur-slow) ease both 80ms; }
+.rb-eq-b      { animation: rb-slide-r var(--dur-slow) ease both 280ms; }
+.rb-eq-result {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  animation: rb-popin var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both 780ms;
+}
+
+.rb-eq-op {
+  font-family: var(--font-display-en);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--text-mute);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.rb-eq-plus { animation: rb-fadein var(--dur-base) ease both 180ms; }
+.rb-eq-eq   { animation: rb-fadein var(--dur-base) ease both 580ms; }
+
+.rb-eq-label {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rb-eq-sub {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-mute);
+  white-space: nowrap;
+}
+
+/* ── Scene 2: 每月 1 本 ────────────────────────────────────── */
+.rb-s2 { gap: 24px; }
+
+.rb-s2-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  animation: rb-chalkin var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rb-s2-num {
+  font-family: var(--hero-num-font);
+  font-style: var(--hero-num-style);
+  font-weight: var(--hero-num-weight);
+  letter-spacing: var(--hero-num-track);
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+  font-size: 280px;
+  color: var(--accent);
+}
+
+.rb-s2-unit-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rb-s2-unit {
+  font-family: var(--font-display-cn);
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--text-2);
+  line-height: 1;
+}
+
+.rb-s2-per {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-mute);
+}
+
+.rb-s2-rule {
+  font-family: var(--font-display-cn);
+  font-size: 34px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rb-fadein var(--dur-base) ease both 420ms;
+}
+
+.rb-s2-ticks {
+  display: flex;
+  gap: 14px;
+}
+
+.rb-tick {
+  width: 6px;
+  height: 36px;
+  background: var(--text-faint);
+  border-radius: 1px;
+  animation: rb-riseup var(--dur-base) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rb-s2-caption {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-faint);
+  margin: 0;
+  animation: rb-fadein var(--dur-base) ease both 1000ms;
+}
+
+/* ── Scene 3: 笔记三要素 ──────────────────────────────────── */
+.rb-s3 { gap: 52px; }
+
+.rb-s3-intro {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rb-fadein var(--dur-base) ease both;
+}
+
+.rb-s3-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.rb-s3-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  animation: rb-chalkin var(--dur-slow) ease both;
+  animation-delay: calc(var(--i, 0) * 260ms);
+}
+
+.rb-s3-num {
+  font-family: var(--hero-num-font);
+  font-style: var(--hero-num-style);
+  font-weight: var(--hero-num-weight);
+  letter-spacing: var(--hero-num-track);
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+  font-size: 80px;
+  color: var(--accent);
+  width: 72px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.rb-s3-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rb-s3-label {
+  font-family: var(--font-display-cn);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rb-s3-sub {
+  font-family: var(--font-body);
+  font-size: 26px;
+  color: var(--text-mute);
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes rb-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rb-chalkin {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rb-riseup {
+  from { opacity: 0; transform: translateY(60px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rb-slide-l {
+  from { opacity: 0; transform: translateX(-36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rb-slide-r {
+  from { opacity: 0; transform: translateX(36px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rb-popin {
+  from { opacity: 0; transform: scale(0.86); }
+  to   { opacity: 1; transform: scale(1); }
+}

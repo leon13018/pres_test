@@ -1,0 +1,399 @@
+/* ReadActive.css — prefix: .ra-
+ * claude-warm: 读前提问列表 / 读中思维导图SVG / 读后反向摘要卡 / 知识网络图
+ */
+
+.ra-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.ra-eyebrow {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: ra-fadein var(--dur-base) ease both;
+}
+
+/* ── Scene 0: 读前提问 ─────────────────────────────────── */
+.ra-s0 { gap: 40px; }
+
+.ra-s0-header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  animation: ra-rise var(--dur-slow) ease both 80ms;
+}
+
+.ra-s0-phase {
+  font-family: var(--font-display-cn);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.ra-s0-vline {
+  display: block;
+  width: 1px;
+  height: 68px;
+  background: var(--rule);
+}
+
+.ra-s0-hint {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  color: var(--text-2);
+}
+
+.ra-s0-qs {
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+}
+
+.ra-s0-q {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  animation: ra-rise var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ra-s0-q:last-child {
+  border-bottom: none;
+}
+
+.ra-s0-qnum {
+  font-family: var(--font-display-en);
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  width: 32px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.ra-s0-qtext {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  color: var(--text);
+}
+
+/* ── Scene 1: 读中 — 思维导图 ─────────────────────────── */
+.ra-s1 { gap: 44px; }
+
+.ra-s1-top {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  animation: ra-fadein var(--dur-base) ease both;
+}
+
+.ra-s1-phase {
+  font-family: var(--font-display-cn);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.ra-s1-desc {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-mute);
+}
+
+.ra-s1-main {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.ra-s1-svg {
+  width: 340px;
+  height: 340px;
+  animation: ra-fadein 300ms ease both 100ms;
+}
+
+.ra-s1-center-circle {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.ra-s1-center-text {
+  font-family: var(--font-display-cn);
+  font-size: 20px;
+  fill: var(--accent);
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+.ra-s1-edge {
+  stroke: var(--rule);
+  stroke-width: 1.5;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: ra-draw 500ms ease both;
+}
+
+.ra-s1-node-g {
+  opacity: 0;
+  animation: ra-fadein 280ms ease both;
+}
+
+.ra-s1-node-circle {
+  fill: var(--surface-2);
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+
+.ra-s1-node-text {
+  font-family: var(--font-display-cn);
+  font-size: 18px;
+  fill: var(--text-2);
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+.ra-s1-types {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.ra-s1-type {
+  font-family: var(--font-display-cn);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text-2);
+  opacity: 0;
+  animation: ra-slide-l var(--dur-slow) ease both;
+}
+
+/* ── Scene 2: 读后 — 反向摘要 ─────────────────────────── */
+.ra-s2 { gap: 36px; }
+
+.ra-s2-top {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  animation: ra-fadein var(--dur-base) ease both;
+}
+
+.ra-s2-phase {
+  font-family: var(--font-display-cn);
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.ra-s2-method {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  color: var(--text);
+}
+
+.ra-s2-rule-text {
+  font-family: var(--font-display-cn);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text-mute);
+  margin: 0;
+  animation: ra-fadein var(--dur-base) ease both 120ms;
+}
+
+.ra-s2-cards {
+  display: flex;
+  gap: 32px;
+}
+
+.ra-s2-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 280px;
+  padding: 36px 40px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  opacity: 0;
+  animation: ra-rise var(--dur-slow) ease both;
+}
+
+.ra-s2-label {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.ra-s2-hint {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+
+/* ── Scene 3: 知识管理工具 ──────────────────────────────── */
+.ra-s3 { gap: 44px; }
+
+.ra-s3-title {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  color: var(--text-2);
+  margin: 0;
+  animation: ra-fadein var(--dur-base) ease both;
+}
+
+.ra-s3-tools {
+  display: flex;
+  gap: 48px;
+}
+
+.ra-s3-tool {
+  font-family: var(--font-display-en);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0;
+  animation: ra-rise var(--dur-slow) ease both;
+}
+
+.ra-s3-divider {
+  width: 680px;
+  height: 1px;
+  background: var(--rule);
+  animation: ra-fadein var(--dur-base) ease both 500ms;
+}
+
+.ra-s3-fields-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  animation: ra-fadein var(--dur-base) ease both 560ms;
+}
+
+.ra-s3-fields-label {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.ra-s3-fields {
+  display: flex;
+  gap: 16px;
+}
+
+.ra-s3-field {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-2);
+  padding: 8px 22px;
+  background: var(--accent-soft);
+  border-radius: var(--r-sm);
+  opacity: 0;
+  animation: ra-fadein 280ms ease both;
+}
+
+/* ── Scene 4: 知识网络 ─────────────────────────────────── */
+.ra-s4 { gap: 40px; }
+
+.ra-s4-top {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  animation: ra-fadein var(--dur-base) ease both;
+}
+
+.ra-s4-freq {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.ra-s4-desc {
+  font-family: var(--font-display-cn);
+  font-size: 32px;
+  color: var(--text-2);
+}
+
+.ra-s4-svg {
+  width: 540px;
+  height: 520px;
+}
+
+.ra-s4-edge {
+  stroke: var(--rule);
+  stroke-width: 1.5;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: ra-draw 600ms ease both;
+}
+
+.ra-s4-node-g {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ra-popin 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ra-s4-node-circle {
+  fill: var(--surface-2);
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+.ra-s4-node-text {
+  font-family: var(--font-display-cn);
+  font-size: 18px;
+  fill: var(--text-2);
+  text-anchor: middle;
+  dominant-baseline: auto;
+}
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes ra-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes ra-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ra-slide-l {
+  from { opacity: 0; transform: translateX(-24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ra-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes ra-popin {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}

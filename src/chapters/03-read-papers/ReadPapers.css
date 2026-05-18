@@ -1,0 +1,324 @@
+/* ReadPapers.css — prefix: .rp-
+ * claude-warm: 平台胶囊 / 慢揭示三类优先 / 单要素英雄卡 / 对比划线
+ */
+
+/* ── 通用 */
+.rp-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.rp-accent { color: var(--accent); }
+
+.rp-eyebrow {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: rp-fadein var(--dur-base) ease both;
+}
+
+/* ── Scene 0: 平台入口 */
+.rp-s0 { gap: 24px; }
+
+.rp-s0-title {
+  font-family: var(--font-display-cn);
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  animation: rp-rise var(--dur-slow) ease both 180ms;
+}
+
+.rp-s0-sub {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rp-fadein var(--dur-base) ease both 360ms;
+}
+
+.rp-platforms {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.rp-platform {
+  font-family: var(--font-body);
+  font-size: 26px;
+  color: var(--text-mute);
+  padding: 10px 28px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  animation: rp-rise var(--dur-base) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rp-s0-tip {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-faint);
+  margin: 0;
+  letter-spacing: 0.04em;
+  animation: rp-fadein var(--dur-base) ease both 1100ms;
+}
+
+/* ── Scene 1: 三类优先 */
+.rp-s1 { gap: 52px; }
+
+.rp-s1-header {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rp-fadein var(--dur-base) ease both;
+}
+
+.rp-typelist {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 960px;
+}
+
+.rp-type-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  animation: rp-rise var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rp-type-num {
+  font-size: 64px;
+  color: var(--accent);
+  width: 52px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.rp-type-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 32px;
+  border-left: 2px solid var(--accent-soft);
+}
+
+.rp-type-label {
+  font-family: var(--font-display-cn);
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rp-type-desc {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-mute);
+}
+
+/* ── Scene 2: 四要素 intro */
+.rp-s2 { gap: 44px; }
+
+.rp-s2-premise {
+  font-family: var(--font-display-cn);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--text-2);
+  margin: 0;
+  animation: rp-rise var(--dur-slow) ease both;
+}
+
+.rp-s2-line2 {
+  animation-delay: 380ms;
+}
+
+.rp-s2-divider {
+  width: 100px;
+  animation: rp-fadein var(--dur-base) ease both 680ms;
+}
+
+.rp-s2-hook {
+  font-family: var(--font-display-cn);
+  font-size: 76px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  animation: rp-rise var(--dur-slow) ease both 880ms;
+}
+
+/* ── Shared: 单要素英雄卡 (steps 3 & 4) */
+.rp-s-elem {
+  gap: 0;
+}
+
+.rp-elem-card {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  animation: rp-rise var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rp-elem-num {
+  font-size: 220px;
+  color: var(--accent);
+  min-width: 152px;
+  text-align: right;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.rp-elem-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 52px;
+  border-left: 2px solid var(--accent);
+}
+
+.rp-elem-label {
+  font-family: var(--font-display-cn);
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.rp-elem-q {
+  font-family: var(--font-body);
+  font-size: 34px;
+  color: var(--text-mute);
+}
+
+/* ── Scene 5: 要素三+四 */
+.rp-s5 {
+  gap: 40px;
+}
+
+.rp-s5-card {
+  width: 1320px;
+  animation: rp-rise var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rp-s5-num {
+  font-size: 120px !important;
+  min-width: 90px !important;
+}
+
+.rp-s5-label {
+  font-size: 60px !important;
+}
+
+.rp-s5-q {
+  font-size: 26px !important;
+}
+
+.rp-s5-body {
+  gap: 12px !important;
+}
+
+/* ── Scene 6: 批判总结 */
+.rp-s6 { gap: 64px; }
+
+.rp-contrast {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.rp-c-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: rp-slide-l var(--dur-slow) ease both 80ms;
+}
+
+.rp-c-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: rp-slide-r var(--dur-slow) ease both 700ms;
+}
+
+.rp-c-word {
+  font-family: var(--font-display-cn);
+  font-size: 80px;
+  font-weight: 700;
+  position: relative;
+}
+
+.rp-c-stale { color: var(--text-faint); }
+
+.rp-c-stale::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 2px;
+  width: 0;
+  background: var(--text-mute);
+  animation: rp-strike var(--dur-base) ease forwards 1300ms;
+}
+
+.rp-c-tag {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-faint);
+}
+
+.rp-c-arrow {
+  font-family: var(--font-display-en);
+  font-style: italic;
+  font-size: 56px;
+  font-weight: 400;
+  color: var(--text-faint);
+  flex-shrink: 0;
+  animation: rp-fadein var(--dur-base) ease both 420ms;
+}
+
+.rp-s6-quote {
+  font-family: var(--font-display-cn);
+  font-size: 44px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rp-rise var(--dur-slow) ease both 1000ms;
+}
+
+/* ── Keyframes */
+@keyframes rp-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rp-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rp-slide-l {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rp-slide-r {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes rp-strike {
+  to { width: 100%; }
+}

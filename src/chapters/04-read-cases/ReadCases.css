@@ -1,0 +1,282 @@
+/* ReadCases.css — prefix: .rc-
+ * claude-warm: 双类别对照 / SVG 趋势折线 / 来源→视角→追问 三列流
+ */
+
+.rc-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.rc-eyebrow {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: rc-fadein var(--dur-base) ease both;
+}
+
+/* ── Scene 0: 第三类 ─────────────────────────────────── */
+.rc-s0 { gap: 44px; }
+
+.rc-s0-row {
+  display: flex;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.rc-s0-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 56px 96px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  animation: rc-rise var(--dur-slow) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rc-s0-label {
+  font-family: var(--font-display-cn);
+  font-size: 68px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.rc-s0-sub {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-mute);
+  white-space: nowrap;
+}
+
+.rc-s0-scope {
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-faint);
+  margin: 0;
+  letter-spacing: 0.03em;
+  animation: rc-fadein var(--dur-base) ease both 740ms;
+}
+
+/* ── Scene 1: 政策报告 + SVG 趋势折线 ──────────────────── */
+.rc-s1 { gap: 32px; }
+
+.rc-s1-source {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-mute);
+  margin: 0;
+  letter-spacing: 0.04em;
+  animation: rc-fadein var(--dur-base) ease both;
+}
+
+.rc-chart {
+  width: 640px;
+  height: 200px;
+  animation: rc-fadein var(--dur-quick) ease both 180ms;
+}
+
+.rc-axis {
+  stroke: var(--rule);
+  stroke-width: 1.5;
+}
+
+.rc-trend {
+  stroke: var(--accent);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 720;
+  stroke-dashoffset: 720;
+  animation: rc-drawline 1400ms cubic-bezier(0.22, 1, 0.36, 1) both 380ms;
+}
+
+.rc-dot {
+  fill: var(--accent);
+  opacity: 0;
+  animation: rc-popin var(--dur-base) ease both;
+}
+
+.rc-s1-labels {
+  display: flex;
+  gap: 20px;
+  animation: rc-fadein var(--dur-base) ease both 1200ms;
+}
+
+.rc-s1-tag {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-mute);
+  padding: 8px 22px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+}
+
+.rc-accent-tag {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.rc-s1-quote {
+  font-family: var(--font-display-cn);
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-2);
+  margin: 0;
+  padding-left: 28px;
+  border-left: 3px solid var(--accent);
+  animation: rc-fadein var(--dur-base) ease both 1700ms;
+}
+
+/* ── Scene 2: 案例拆解 三列流 ──────────────────────────── */
+.rc-s2 { gap: 52px; }
+
+.rc-s2-flow {
+  display: flex;
+  align-items: center;
+}
+
+.rc-s2-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 340px;
+}
+
+.rc-s2-colhead {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--text-faint);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  animation: rc-fadein var(--dur-base) ease both;
+}
+
+.rc-s2-colhead-l { animation-delay: 0ms; }
+.rc-s2-colhead-r { animation-delay: 480ms; }
+
+.rc-s2-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rc-s2-source {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text-2);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  animation: rc-rise var(--dur-base) ease both;
+}
+
+.rc-s2-q {
+  font-family: var(--font-body);
+  font-size: 30px;
+  color: var(--accent);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  animation: rc-rise var(--dur-base) ease both;
+}
+
+.rc-s2-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 52px;
+  animation: rc-fadein var(--dur-slow) ease both 280ms;
+}
+
+.rc-s2-lens {
+  font-family: var(--font-display-cn);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 18px 32px;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--r-sm);
+  background: var(--accent-soft);
+  white-space: nowrap;
+}
+
+.rc-s2-arrow {
+  font-family: var(--font-display-en);
+  font-style: italic;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--text-faint);
+  line-height: 1;
+}
+
+/* 底部举例 */
+.rc-s2-example {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.rc-s2-ex-label {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  opacity: 0;
+  animation: rc-fadein var(--dur-base) ease both 1320ms;
+}
+
+.rc-s2-ex-tags {
+  display: flex;
+  gap: 16px;
+}
+
+.rc-s2-ex-tag {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-mute);
+  padding: 8px 20px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+  background: var(--surface-2);
+  opacity: 0;
+  animation: rc-rise var(--dur-base) ease both;
+}
+
+/* ── Keyframes ───────────────────────────────────────── */
+@keyframes rc-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rc-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rc-drawline {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes rc-popin {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}

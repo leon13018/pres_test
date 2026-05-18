@@ -1,0 +1,269 @@
+/* Hook.css — prefix: .hk-
+ * chalk-garden 主题：深色石板底 / Patrick Hand 手写字 / 粉笔黄强调 / 虚线分割
+ */
+
+/* ── 通用基底 ──────────────────────────────────────────────── */
+.hk-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.hk-yellow {
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* ── Scene 0: 文献堆成山 ──────────────────────────────────── */
+.hk-s0 {
+  gap: 28px;
+}
+
+.hk-s0-title {
+  font-family: var(--font-display-cn);
+  font-size: 108px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+  line-height: 1;
+  text-shadow: var(--text-shadow);
+  animation: hk-chalkin var(--dur-slow) ease both;
+}
+
+.hk-s0-sub {
+  font-family: var(--font-body);
+  font-size: 30px;
+  color: var(--text-2);
+  margin: 0;
+  animation: hk-chalkin var(--dur-base) ease both 200ms;
+}
+
+/* 文献堆叠容器 */
+.hk-s0-pile {
+  position: relative;
+  width: 480px;
+  height: 180px;
+  animation: hk-fadein var(--dur-base) ease both 280ms;
+}
+
+/* 单张文献纸 */
+.hk-doc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 76px;
+  height: 100px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  background: var(--surface-2);
+  transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) rotate(var(--rot));
+  animation: hk-docfall var(--dur-base) cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* 文献上的"内容线"模拟 */
+.hk-doc::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 22px;
+  height: 2px;
+  background: var(--accent-soft);
+  box-shadow: 0 14px 0 var(--accent-soft), 0 28px 0 var(--accent-soft);
+}
+
+.hk-s0-punch {
+  font-family: var(--font-display-cn);
+  font-size: 42px;
+  color: var(--text-2);
+  margin: 0;
+  animation: hk-chalkin var(--dur-base) ease both 700ms;
+}
+
+/* ── Scene 1: 本科 vs 研究生 ─────────────────────────────── */
+.hk-s1 {
+  gap: 52px;
+}
+
+.hk-s1-compare {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.hk-s1-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  min-width: 280px;
+}
+
+.hk-s1-left {
+  animation: hk-slide-l var(--dur-slow) ease both 80ms;
+}
+
+.hk-s1-right {
+  animation: hk-slide-r var(--dur-slow) ease both 220ms;
+}
+
+.hk-s1-era {
+  font-family: var(--font-display-cn);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  text-shadow: var(--text-shadow);
+}
+
+.hk-s1-flow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-body);
+  font-size: 24px;
+  color: var(--text-mute);
+  padding: 12px 20px;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-xs);
+  white-space: nowrap;
+}
+
+.hk-s1-arrow {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--text-mute);
+  line-height: 1;
+}
+
+.hk-s1-flow-text {
+  font-family: var(--font-body);
+  font-size: 22px;
+}
+
+.hk-s1-tag {
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--text-mute);
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* 中间分隔柱 */
+.hk-s1-mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: hk-fadein var(--dur-base) ease both;
+}
+
+.hk-s1-vline {
+  width: 0;
+  height: 72px;
+  border-left: 1px solid var(--rule);
+}
+
+.hk-s1-vs {
+  font-family: var(--font-display-en);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.1em;
+}
+
+/* article 信息池：原文名句 */
+.hk-s1-quote {
+  font-family: var(--font-display-cn);
+  font-size: 28px;
+  color: var(--text-mute);
+  margin: 0;
+  padding: 10px 0 10px 28px;
+  border-left: 3px solid var(--accent);
+  animation: hk-fadein var(--dur-base) ease both 480ms;
+  font-style: normal;
+}
+
+/* ── Scene 2: 三件事预告 ──────────────────────────────────── */
+.hk-s2 {
+  gap: 60px;
+}
+
+.hk-s2-intro {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  color: var(--text-2);
+  margin: 0;
+  animation: hk-chalkin var(--dur-base) ease both;
+}
+
+.hk-s2-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.hk-s2-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 200px;
+  animation: hk-chalkin var(--dur-slow) ease both;
+  animation-delay: calc(var(--i, 0) * 220ms);
+}
+
+.hk-s2-num {
+  font-size: 100px;
+  color: var(--accent);
+}
+
+.hk-s2-tick {
+  width: 48px;
+  margin: 0;
+}
+
+.hk-s2-label {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes hk-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes hk-chalkin {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hk-docfall {
+  from {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy) - 72px)) rotate(var(--rot));
+  }
+  to {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) rotate(var(--rot));
+  }
+}
+
+@keyframes hk-slide-l {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hk-slide-r {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

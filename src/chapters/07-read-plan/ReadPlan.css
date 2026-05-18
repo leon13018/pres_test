@@ -1,0 +1,398 @@
+/* ReadPlan.css — prefix: .rpl-
+ * claude-warm: SVG三阶段时间轴 / 阶段详解 / 专题五步流程 / 阅读小组10+10
+ */
+
+.rpl-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: var(--stage-pad-y) var(--stage-pad-x);
+}
+
+.rpl-eyebrow {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0;
+  animation: rpl-fadein var(--dur-base) ease both;
+}
+
+/* ── 阶段 hero（scenes 1 / 2 / 3 共用） ─────────────── */
+.rpl-phase-hd {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  animation: rpl-fadein var(--dur-base) ease both;
+}
+
+.rpl-phase-hero {
+  font-family: var(--font-display-cn);
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.rpl-phase-label {
+  font-family: var(--font-display-cn);
+  font-size: 36px;
+  color: var(--text-2);
+}
+
+/* ── Scene 0: SVG 时间轴 ─────────────────────────────── */
+.rpl-s0 { gap: 36px; }
+
+.rpl-s0-title {
+  font-family: var(--font-display-cn);
+  font-size: 44px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rpl-fadein var(--dur-base) ease both 80ms;
+}
+
+.rpl-s0-svg {
+  width: 800px;
+  height: 200px;
+  overflow: visible;
+}
+
+.rpl-s0-rail {
+  stroke: var(--rule);
+  stroke-width: 2;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: rpl-draw 700ms ease both 120ms;
+}
+
+.rpl-s0-node-g {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rpl-popin 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rpl-s0-dot {
+  fill: var(--accent);
+}
+
+.rpl-s0-node-name {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  font-weight: 700;
+  fill: var(--text);
+  text-anchor: middle;
+}
+
+.rpl-s0-node-sub {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  fill: var(--text-faint);
+  text-anchor: middle;
+}
+
+/* ── Scene 1: 研一上 ─────────────────────────────────── */
+.rpl-s1 { gap: 40px; }
+
+.rpl-s1-reads {
+  display: flex;
+  gap: 32px;
+}
+
+.rpl-s1-read {
+  font-family: var(--font-display-cn);
+  font-size: 56px;
+  font-weight: 700;
+  color: var(--text);
+  padding: 20px 48px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  opacity: 0;
+  animation: rpl-rise var(--dur-slow) ease both;
+}
+
+.rpl-s1-goal {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-mute);
+  margin: 0;
+  text-align: center;
+  animation: rpl-fadein var(--dur-base) ease both 640ms;
+}
+
+/* ── Scene 2: 研一下 ─────────────────────────────────── */
+.rpl-s2 { gap: 40px; }
+
+.rpl-s2-items {
+  display: flex;
+  flex-direction: column;
+  width: 860px;
+}
+
+.rpl-s2-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  opacity: 0;
+  animation: rpl-rise var(--dur-slow) ease both;
+}
+
+.rpl-s2-item:last-child {
+  border-bottom: none;
+}
+
+.rpl-s2-label {
+  font-family: var(--font-display-cn);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rpl-s2-note {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+/* ── Scene 3: 研二+ ──────────────────────────────────── */
+.rpl-s3 { gap: 40px; }
+
+.rpl-s3-flow {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  animation: rpl-rise var(--dur-slow) ease both 200ms;
+}
+
+.rpl-s3-node {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  color: var(--text-2);
+  padding: 16px 40px;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+}
+
+.rpl-s3-node--accent {
+  color: var(--text);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.rpl-s3-arrow {
+  font-family: var(--font-body);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.rpl-s3-caption {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text-mute);
+  margin: 0;
+  animation: rpl-fadein var(--dur-base) ease both 560ms;
+}
+
+/* ── Scene 4: 专题式阅读法 ───────────────────────────── */
+.rpl-s4 { gap: 48px; }
+
+.rpl-s4-title {
+  font-family: var(--font-display-cn);
+  font-size: 48px;
+  color: var(--text-2);
+  margin: 0;
+  animation: rpl-fadein var(--dur-base) ease both;
+}
+
+.rpl-s4-flow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.rpl-s4-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 200px;
+  opacity: 0;
+  animation: rpl-rise var(--dur-slow) ease both;
+}
+
+.rpl-s4-num {
+  font-family: var(--font-display-en);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.rpl-s4-step-label {
+  font-family: var(--font-display-cn);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+}
+
+.rpl-s4-detail {
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-faint);
+  text-align: center;
+  line-height: 1.5;
+  white-space: pre-line;
+}
+
+.rpl-s4-arrow {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-faint);
+  align-self: center;
+  margin-top: -32px;
+  padding: 0 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: rpl-fadein 260ms ease both;
+}
+
+/* ── Scene 5: 阅读小组 ───────────────────────────────── */
+.rpl-s5 { gap: 44px; }
+
+.rpl-s5-top {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  animation: rpl-rise var(--dur-slow) ease both 80ms;
+}
+
+.rpl-s5-size {
+  font-family: var(--font-display-en);
+  font-size: 96px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.rpl-s5-top-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rpl-s5-unit {
+  font-family: var(--font-display-cn);
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.rpl-s5-freq {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.06em;
+}
+
+.rpl-s5-format {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.rpl-s5-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 300px;
+  padding: 36px 0;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-sm);
+  opacity: 0;
+  animation: rpl-rise var(--dur-slow) ease both;
+}
+
+.rpl-s5-mins {
+  font-family: var(--font-display-en);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.rpl-s5-min-label {
+  font-family: var(--font-display-cn);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-mute);
+  margin-top: -8px;
+}
+
+.rpl-s5-role {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text-2);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.rpl-s5-plus {
+  font-family: var(--font-display-en);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--rule);
+  animation: rpl-fadein var(--dur-base) ease both 300ms;
+}
+
+.rpl-s5-quote {
+  font-family: var(--font-display-cn);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--text-faint);
+  margin: 0;
+  padding-left: 24px;
+  border-left: 2px solid var(--rule);
+  animation: rpl-fadein var(--dur-base) ease both 700ms;
+}
+
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes rpl-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes rpl-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rpl-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes rpl-popin {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,206 @@
+[
+  {
+    "chapter": "hook",
+    "step": 1,
+    "text": "研一第一个月，大概每个人都会撞上同一件事。导师扔过来一堆文献——根本看不完。",
+    "audio": "hook/1.mp3"
+  },
+  {
+    "chapter": "hook",
+    "step": 2,
+    "text": "这不是你一个人的问题。研究生的阅读跟本科是两码事。本科是等知识送上门；研究生要自己生产知识。没有人告诉过你，这个转变怎么发生。",
+    "audio": "hook/2.mp3"
+  },
+  {
+    "chapter": "hook",
+    "step": 3,
+    "text": "今天我聊三件事：读什么、怎么读、怎么规划。",
+    "audio": "hook/3.mp3"
+  },
+  {
+    "chapter": "read-books",
+    "step": 1,
+    "text": "先说读什么。理论书籍是第一类。我的原则是从\"奠基人\"的经典著作读起。这类书帮你搭学科的基础框架，搞清楚核心理论是怎么来的。",
+    "audio": "read-books/1.mp3"
+  },
+  {
+    "chapter": "read-books",
+    "step": 2,
+    "text": "读起来确实费力——但没有替代品。找带注释的版本，或者配导读资料一起读。等于有隐形导师帮你啃难点。",
+    "audio": "read-books/2.mp3"
+  },
+  {
+    "chapter": "read-books",
+    "step": 3,
+    "text": "我给自己定了个规矩：每月至少精读一本经典著作。",
+    "audio": "read-books/3.mp3"
+  },
+  {
+    "chapter": "read-books",
+    "step": 4,
+    "text": "同时写读书笔记，记重点内容、思考感悟和疑问。不是为了表现勤奋，是因为这是真正理解的过程。",
+    "audio": "read-books/4.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 1,
+    "text": "第二类是学术论文。找论文我常用三个平台。知网、Web of Science、Google Scholar。根据研究方向设关键词，定期追踪，别让前沿跑太远。",
+    "audio": "read-papers/1.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 2,
+    "text": "看哪些论文？三类优先。高被引论文，代表领域内公认重要的成果。综述文章，一篇就能摸清一个方向的发展历程。权威期刊的论文，质量和创新性有底线。",
+    "audio": "read-papers/2.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 3,
+    "text": "读论文不是逛文章，而是在做批判性评估。我盯四个要素。",
+    "audio": "read-papers/3.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 4,
+    "text": "研究问题——作者想解决什么？",
+    "audio": "read-papers/4.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 5,
+    "text": "方法设计——路子合理吗？",
+    "audio": "read-papers/5.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 6,
+    "text": "数据分析——数字严不严谨？结论讨论——这个结论站得住吗？",
+    "audio": "read-papers/6.mp3"
+  },
+  {
+    "chapter": "read-papers",
+    "step": 7,
+    "text": "带着这四个持续追问，批判性思维就是这么练出来的。不是盲目接受论文观点，而是自己做评估。",
+    "audio": "read-papers/7.mp3"
+  },
+  {
+    "chapter": "read-cases",
+    "step": 1,
+    "text": "第三类是政策报告和案例材料。偏应用型学科——工程、管理、金融——绕不开。",
+    "audio": "read-cases/1.mp3"
+  },
+  {
+    "chapter": "read-cases",
+    "step": 2,
+    "text": "智库和研究机构的报告，能给你宏观视角。我有时候翻一份行业报告，直接就能看出一个选题的方向。",
+    "audio": "read-cases/2.mp3"
+  },
+  {
+    "chapter": "read-cases",
+    "step": 3,
+    "text": "案例来源很广：项目经验、新闻事件、行业报告都行。我的习惯是用学术视角拆解案例。里面用了什么理论？问题出在哪？解法是什么？比如学企业管理，我会找知名企业的案例，拆它们的战略制定、组织架构、市场营销，然后用课上的理论去评价总结。",
+    "audio": "read-cases/3.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 1,
+    "text": "精读和泛读是两种不同的阅读方式，各有适用场景。精读用于核心理论、重点论文，或准备引用的材料。泛读则用于快速浏览文献、获取研究动态、构建背景知识。",
+    "audio": "read-tactics/1.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 2,
+    "text": "精读，我用圈批卡摘四步法。四个步骤，各有分工。",
+    "audio": "read-tactics/2.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 3,
+    "text": "圈，圈关键概念和重要结论，方便复习回顾。批，写下理解和疑问，记录思维过程。卡，整理知识点和数据，分类保存。摘，摘录有启发的段落，形成素材库。",
+    "audio": "read-tactics/3.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 4,
+    "text": "泛读用SQ3R法。Survey，浏览标题、摘要和关键词，了解整体结构。Question，针对内容提出感兴趣的问题。",
+    "audio": "read-tactics/4.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 5,
+    "text": "Read，带着问题阅读，重点关注相关内容。Recite，用自己的语言复述，检验理解程度。Review，定期复习，强化记忆。",
+    "audio": "read-tactics/5.mp3"
+  },
+  {
+    "chapter": "read-tactics",
+    "step": 6,
+    "text": "在阅读过程中，根据材料与研究方向的相关性合理设定阅读深度，不要陷入什么都想精读的误区，浪费时间和精力。",
+    "audio": "read-tactics/6.mp3"
+  },
+  {
+    "chapter": "read-active",
+    "step": 1,
+    "text": "很多时候读完没吸收，是因为读的时候太被动了。我的改法：读之前先提3到5个问题。作者想解决什么问题？用了什么方法？我接受这个结论吗？带着这些问题读，信息会主动进来，不是滑走。",
+    "audio": "read-active/1.mp3"
+  },
+  {
+    "chapter": "read-active",
+    "step": 2,
+    "text": "读的时候，我还会画结构图、逻辑图，或者思维导图。不只是整理笔记，更能帮你发现论证里的漏洞。",
+    "audio": "read-active/2.mp3"
+  },
+  {
+    "chapter": "read-active",
+    "step": 3,
+    "text": "读完之后写反向摘要。不看原文，凭记忆写出核心观点、文章结构和不足之处。这是把知识真正内化的方式。",
+    "audio": "read-active/3.mp3"
+  },
+  {
+    "chapter": "read-active",
+    "step": 4,
+    "text": "建立自己的知识管理体系。工具用Endnote、Zotero、NoteExpress都行。每篇读完记录：摘要、关键词、引用句和个人评价。放进Excel或Notion，形成系统。",
+    "audio": "read-active/4.mp3"
+  },
+  {
+    "chapter": "read-active",
+    "step": 5,
+    "text": "每个月末，翻一次记录，把这个月读的文献串起来，找哪几篇在说同一个问题。知识不再是散点，而是网状结构。",
+    "audio": "read-active/5.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 1,
+    "text": "阅读不能毫无章法，要和你的研究目标融合。不同阶段，读书重点不一样。研一上打基础，研一下聚焦方向，研二之后深化研究。",
+    "audio": "read-plan/1.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 2,
+    "text": "研一上学期，重点读理论书籍和综述文章。搭学科框架，了解领域研究现状，为后续选题做准备。",
+    "audio": "read-plan/2.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 3,
+    "text": "研一下学期，围绕你想研究的主题搭文献体系，形成初步研究设计。大量阅读相关文献，比较不同研究的方法和结论，找出研究空白和创新点。",
+    "audio": "read-plan/3.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 4,
+    "text": "研二之后，结合写作需要，有针对性地查阅和精读。把方法和结论消化进自己的论文里。",
+    "audio": "read-plan/4.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 5,
+    "text": "为避免碎片化阅读，我用专题式阅读法。先定专题，列关键词，选10到20篇核心文献，纵向看研究怎么演化，横向比较方法和结论，最后写专题报告。这份报告可以直接转化成开题报告或综述的一部分。",
+    "audio": "read-plan/5.mp3"
+  },
+  {
+    "chapter": "read-plan",
+    "step": 6,
+    "text": "独自阅读容易倦怠，建议找同领域的人组建3到5人的阅读小组。每周一次，每人10分钟讲论文，10分钟集中讨论。有时候一句话，就能让你重新理解一篇读了三遍的论文。",
+    "audio": "read-plan/6.mp3"
+  }
+]

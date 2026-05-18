@@ -1,0 +1,61 @@
+/* ─────────────────────────────────────────────────────────────────────
+ * Theme · claude-warm
+ *   Anthropic / Claude brand aesthetic: warm near-white canvas, deep
+ *   espresso text, and the signature coral-terracotta accent.
+ *   Instrument Serif italic for EN display, Noto Serif SC for CN,
+ *   Inter for body. No surface decoration — pure whitespace and
+ *   typography carry the stage.
+ *
+ *   character knobs:
+ *     • hero numbers   — Instrument Serif italic (editorial)
+ *     • rule           — 1px solid warm hairline
+ *     • card           — 8px refined radius, paper-float shadow
+ *     • surface        — clean, no pattern
+ *     • motion         — slow cinematic editorial
+ * ───────────────────────────────────────────────────────────────────── */
+:root {
+  /* ─── palette ─── */
+  --shell:        #ede8df;
+  --surface:      #faf8f5;
+  --surface-2:    #f2ede6;
+  --surface-3:    #e9e2d8;
+  --text:         #1c1410;
+  --text-2:       #3a2a20;
+  --text-mute:    #7a6658;
+  --text-faint:   #afa098;
+  --rule:         rgba(120, 90, 70, 0.15);
+  --accent:       #cc7b52;
+  --accent-soft:  rgba(204, 123, 82, 0.10);
+  --accent-glow:  rgba(204, 123, 82, 0.40);
+
+  /* ─── fonts ─── */
+  --font-display-cn: "Noto Serif SC", "Source Han Serif SC", serif;
+  --font-display-en: "Instrument Serif", Georgia, serif;
+  --font-body:       "Inter", "Noto Sans SC", -apple-system, sans-serif;
+  --font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --font-features:   "tnum", "ss01";
+
+  /* ─── design identity: editorial serif warmth ─── */
+  --r-card:           var(--r-sm);    /* 8px refined, not keynote-round */
+  --r-stage:          0;
+  --rule-w:           1px;
+  --rule-style:       solid;
+  --hero-num-font:    var(--font-display-en);
+  --hero-num-style:   italic;
+  --hero-num-weight:  400;
+  --hero-num-track:   -0.02em;
+  --stage-pad-x:      140px;
+  --stage-pad-y:      100px;
+  --card-shadow:
+    0 1px 2px rgba(28, 20, 16, 0.04),
+    0 8px 32px rgba(28, 20, 16, 0.08);
+  --card-glass-bg:      rgba(250, 248, 245, 0.85);
+  --card-glass-border:  rgba(250, 248, 245, 0.90);
+  --shadow-stage:
+    0 40px 120px rgba(28, 20, 16, 0.14),
+    0 0 0 1px rgba(0, 0, 0, 0.03);
+
+  /* ─── decoration: none — whitespace is the signature ─── */
+}
+
+body { font-weight: 700; }
